@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#c90018">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="CONCEPT SCHOOL">
+  <title>CONCEPT SCHOOL</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #242424;
+      background: linear-gradient(145deg, #fff 0%, #fff 58%, #fff0f1 100%); }
+    main { width: min(100%, 420px); text-align: center; }
+    .logo { width: min(78vw, 310px); height: min(78vw, 310px); object-fit: contain;
+      background: #fff; border-radius: 28px; padding: 8px; box-shadow: 0 12px 34px #8b00151c; }
+    h1 { margin: 22px 0 4px; color: #c90018; font-size: 25px; letter-spacing: .5px; }
+    p { margin: 0 0 24px; color: #666; font-size: 14px; }
+    a, button { display: block; width: 100%; border: 0; border-radius: 14px; padding: 16px 18px;
+      background: #c90018; color: #fff; text-decoration: none; font-size: 17px; font-weight: 700;
+      cursor: pointer; box-shadow: 0 7px 18px #c9001830; }
+    .hint { margin-top: 16px; font-size: 12px; line-height: 1.6; color: #888; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="./icons/icon-512.png" alt="CONCEPT SCHOOL">
+    <h1>CONCEPT SCHOOL</h1>
+    <p>ระบบเช็คชื่อนักเรียน</p>
+    <a href="https://script.google.com/macros/s/AKfycbx1bP7f5UhwogQ0k2hMHq5Ehkj28LKFynwGKiRDiwZfmLZ0pGWinOfmLO7YNiIFQjjE5g/exec" rel="noopener">เปิดโปรแกรมเช็คชื่อ</a>
+    <div class="hint">เพิ่มไอคอนนี้ไว้บนหน้าจอหลัก เพื่อเข้าใช้งานครั้งต่อไปได้สะดวก</div>
+  </main>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
+    }
+  </script>
+</body>
+</html>
